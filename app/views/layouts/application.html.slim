@@ -12,4 +12,6 @@ html
 
   body
     == breadcrumbs separator: " &rsaquo; "
+    = render "layouts/header"
     = yield
+    = render "layouts/footer"
