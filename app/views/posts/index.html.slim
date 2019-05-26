@@ -1,5 +1,7 @@
 - set_meta_tags title: "新着記事一覧"
 
 - breadcrumb :posts
-ul
-  = render @posts
+
+= render "layouts/user_page" do
+  ul
+    = render @posts

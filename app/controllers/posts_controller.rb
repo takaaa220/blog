@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class PostsController < UserPageController
   def index
     @posts = Post.published.desc.map(&:decorate)
   end

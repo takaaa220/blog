@@ -1,3 +1,15 @@
 @charset "UTF-8";
 
 @import "reset";
+@import "color";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $back;
+  color: $char;
+  font-family: "Roboto", "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+}

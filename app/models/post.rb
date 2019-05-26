@@ -4,4 +4,8 @@ class Post < ApplicationRecord
 
   scope :desc, -> { order(id: :desc) }
   scope :published, -> { where(published: true) }
+
+  def self.posts_per_month
+    Post.group("MONTH(date)")
+  end
 end
