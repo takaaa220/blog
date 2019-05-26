@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_05_26_084609) do
     t.string "title", null: false
     t.text "content", null: false
     t.boolean "published", default: false, null: false
+    t.datetime "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

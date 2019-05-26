@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.text :content, null: false
       t.boolean :published, null: false, default: false
+      t.datetime :published_at
 
       t.timestamps
     end
