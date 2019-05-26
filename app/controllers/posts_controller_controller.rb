@@ -1,2 +1,0 @@
-class PostsControllerController < ApplicationController
-end
