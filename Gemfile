@@ -17,6 +17,7 @@ gem 'draper'
 gem 'ransack'
 gem 'kaminari'
 gem 'rails-i18n'
+gem 'meta-tags'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
