@@ -23,6 +23,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'           # コンソールをirbからpryに置き換える。
+  gem 'pry-byebug'          # ソースコードにブレークポイントを埋め込んで、所定のポイントでpryを起動
 end
 
 group :development do
@@ -36,8 +38,6 @@ group :development do
   gem 'foreman'
   gem 'bullet'              # 「N+1 問題」を検出してくれる
   gem 'letter_opener_web'   # 送信したメールを確認できる
-  gem 'pry-rails'           # コンソールをirbからpryに置き換える。
-  gem 'pry-byebug'          # ソースコードにブレークポイントを埋め込んで、所定のポイントでpryを起動
 end
 
 group :test do
