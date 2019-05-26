@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  unless Rails.env.development?
+  if Rails.env.production?
     rescue_from StandardError, with: :render_500
     rescue_from ActiveRecord::RecordNotFound, ActionController::RoutingError, with: :render_404
   end
