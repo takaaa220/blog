@@ -1,7 +1,15 @@
 section.Profile
-  h4.Profile__Name
-    | Takashi Hirata (takaaa220)
-  = image_tag "/takaaa220.png", alt: "takaaa220", class: "Profile__Img"
+  h4.SideMenu__Title
+    | 自己紹介
+  .Profile__ImgWrapper
+    = image_tag "/takaaa220.png", alt: "takaaa220", class: "Profile__Img"
+    .Profile__SNSs
+      a.Profile__SNS href="https://github.com/takaaa220" target="_blank"
+        | Github
+      a.Profile__SNS href="https://twitter.com/takaaa220" target="_blank"
+        | Twitter
+  h5.Profile__Name
+    | Takashi Hirata(@takaaa220)
   p.Profile__Description
     | 1996年生まれ．渋谷のベンチャー企業で働いています．バックエンドの方が好きですが，フロントも書きます．
     br

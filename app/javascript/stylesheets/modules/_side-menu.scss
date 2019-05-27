@@ -1,0 +1,56 @@
+.SideMenu {
+  &__Title {
+    color: $green;
+    font-size: 2.4rem;
+    line-height: 2;
+    text-align: center;
+  }
+
+  > section {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.Profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__ImgWrapper {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__Img {
+    border-radius: 50%;
+    border: 2px solid $green;
+    height: 80px;
+    margin-right: 20px;
+    width: 80px;
+  }
+
+  &__SNS {
+    color: $green;
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  &__Name {
+    color: $char;
+    font-size: 2.0rem;
+    margin-bottom: 12px;
+  }
+}
+
+.Popular {
+
+}
+
+.Archive {
+
+}
