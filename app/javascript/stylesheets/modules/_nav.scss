@@ -1,0 +1,14 @@
+.Nav {
+  display: flex;
+  padding: 8px 0;
+
+  &__Item {
+    display: block;
+    padding: 0 20px;
+
+    a {
+      color: $gray;
+      font-weight: bold;
+    }
+  }
+}

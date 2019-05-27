@@ -1,0 +1,26 @@
+.Header {
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+
+  @include mb {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__Link {
+    align-items: center;
+    background-color: $bggray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: $char;
+    display: block;
+    font-size: 1.6rem;
+    padding: 16px;
+    text-decoration: none;
+
+    @include sb {
+      font-size: 1.4rem;
+    }
+  }
+}

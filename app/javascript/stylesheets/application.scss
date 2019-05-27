@@ -2,6 +2,13 @@
 
 @import "reset";
 @import "color";
+@import "mixins";
+
+@import "modules/breadcrumbs";
+@import "modules/container";
+@import "modules/footer";
+@import "modules/header";
+@import "modules/nav";
 
 html {
   font-size: 62.5%;
@@ -12,4 +19,5 @@ body {
   color: $char;
   font-family: "Roboto", "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
+  line-height: 1.5;
 }

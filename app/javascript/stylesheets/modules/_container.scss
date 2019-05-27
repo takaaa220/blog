@@ -1,0 +1,26 @@
+.Container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 20px;
+  padding: 32px 16px 0;
+  width: 100%;
+
+  &__Main {
+    margin-right: 16px;
+    width: 740px;
+
+    @include lb {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__Side {
+    width: 300px;
+
+    @include lb {
+      display: none;
+    }
+  }
+}

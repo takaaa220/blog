@@ -1,5 +1,18 @@
 header.Header
-  = link_to "takaaa220", root_path, class: "Header__Logo"
-  p.Header__Text
-    | ブログ，はじめました．
+  a.Header__Link href="/"
+    | Engineer.new(name: 'takaaa220')
+    br
+    | me.language
+    br
+    | => "Ruby, Python, C++, React, Typescript..."
+  / nav
+  /   ul.Nav
+  /     li.Nav__Item
+  /       = link_to "Ruby", "#"
+  /     li.Nav__Item
+  /       = link_to "React", "#"
+  /     li.Nav__Item
+  /       = link_to "プログラミング", "#"
+  /     li.Nav__Item
+  /       = link_to "趣味", "#"
   / TODO: 検索窓設置
