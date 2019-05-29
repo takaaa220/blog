@@ -1,5 +1,6 @@
 class Admin::PostsController < Admin::BaseController
   def index
+    @posts = Admin::PostDecorator.decorate_collection(Post.all.desc)
   end
 
   def show
@@ -15,5 +16,11 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def destroy
+  end
+
+  def toggle
+    post = Post.find(params[:id])
+    post.toggle!(:published)
+    redirect_to admin_posts_path
   end
 end

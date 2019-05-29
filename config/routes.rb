@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :posts
 
   namespace :admin do
-    resources :posts
+    resources :posts do
+      post "toggle", on: :member
+    end
   end
 end
