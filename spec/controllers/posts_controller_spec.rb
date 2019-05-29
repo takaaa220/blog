@@ -8,6 +8,7 @@ RSpec.describe PostsController, type: :controller do
 
   describe "get #index" do
     before do
+      @last_post = create(:post, { published: true} )
       get :index
       @posts = assigns(:posts)
     end
@@ -17,16 +18,15 @@ RSpec.describe PostsController, type: :controller do
     end
 
     it "show a post" do
-      expect(@posts.size).to eq 1
+      expect(@posts.size).to eq 2
     end
 
     it "show only published post" do
-      expect(@posts.first).to eq @published_post
+      expect(@posts.map(&:published).include?(false)).to be_falsey
     end
 
     it "show desc order" do
-      @last_post = create(:post, { published: true} )
-      expect(@posts).to eq [@last_post, @published_post]
+      expect(@posts.map(&:id)).to eq [@last_post.id, @published_post.id]
     end
   end
 

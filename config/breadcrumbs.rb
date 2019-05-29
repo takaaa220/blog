@@ -12,6 +12,11 @@ crumb :post do |post|
   parent :posts
 end
 
+crumb :login do
+  link "ログイン", login_path
+  parent :root
+end
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end

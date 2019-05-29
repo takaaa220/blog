@@ -4,6 +4,6 @@ class PostsController < UserPageController
   end
 
   def show
-    @post = Post.find(params[:id]).decorate
+    @post = Post.published.find(params[:id]).decorate
   end
 end
