@@ -4,6 +4,7 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def show
+    @post = current_user.posts.find(params[:id])
   end
 
   def new
@@ -25,7 +26,7 @@ class Admin::PostsController < Admin::BaseController
 
   def update
     @post = current_user.posts.find(params[:id])
-    if @post.save(post_params)
+    if @post.update(post_params)
       redirect_to admin_posts_path
     else
       render :edit
