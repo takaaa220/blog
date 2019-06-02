@@ -9,6 +9,7 @@ user = User.create(
   Post.create(
     user_id: user.id,
     title: "title#{i}",
+    description: "description:#{i}",
     content: "#{i} contentcontentcontentcontentcontentcontentcontentcontentcontentcontent"
   )
 end
