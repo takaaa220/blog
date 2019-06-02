@@ -4,7 +4,7 @@
 h2
   = @post.title
 p
-  = @post.content
+  = markdown(@post.content).html_safe
 
 span
   = @post.published_time
