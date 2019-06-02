@@ -28,5 +28,17 @@ RSpec.describe Post, type: :model do
         expect(@post).not_to be_valid
       end
     end
+
+    describe "#description" do
+      it "is invalid without description" do
+        @post.description = ""
+        expect(@post).not_to be_valid
+      end
+
+      it "is invalid when description > 200" do
+        @post.description = "a" * 201
+        expect(@post).not_to be_valid
+      end
+    end
   end
 end

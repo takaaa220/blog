@@ -8,6 +8,7 @@ ja:
         id: ID
         title: タイトル
         content: 本文
+        description: 概要
       user:
         id: ID
         email: メールアドレス
