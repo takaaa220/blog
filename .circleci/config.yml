@@ -5,13 +5,11 @@ jobs:
       - image: circleci/ruby:2.6.0-node
         environment:
           RAILS_ENV: test
-          PGHOST: 127.0.0.1
-          PGUSER: root
-      - image: circleci/postgres:9.4.12-alpine
-        # 環境情報を追加
-        environment:
-          - POSTGRES_USER=root
-          - POSTGRES_DB=blog_test
+          DB_HOST: 127.0.0.1
+          DB_USERNAME: 'root'
+          DB_PASSWORD: ''
+      - image: circleci/mysql:5.7
+
     # ディレクトリ情報を移動（こうしないとエラーになる）
     working_directory: ~/blog
     steps:
