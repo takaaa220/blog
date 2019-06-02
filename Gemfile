@@ -19,6 +19,8 @@ gem 'kaminari'
 gem 'rails-i18n'
 gem 'meta-tags'
 gem 'gretel'
+gem 'redcarpet'
+gem 'coderay'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
