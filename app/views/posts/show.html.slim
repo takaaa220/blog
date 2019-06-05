@@ -8,7 +8,7 @@
       = @post.published_time
 
     h1.Post__Title
-      = link_to @post.title, @post, class: "Post__Link"
+      = @post.title
 
-    div.markdown
+    div.Post__Markdown
       = markdown(@post.content).html_safe

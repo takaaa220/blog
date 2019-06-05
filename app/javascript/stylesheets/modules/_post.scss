@@ -1,0 +1,69 @@
+.Post {
+  &__Date {
+    color: $gray;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  &__Title {
+    color: $green;
+    font-size: 2.6rem;
+    margin-bottom: 8px;
+
+    @include mb {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__Markdown {
+    color: $char;
+
+    h2, h3, h4 {
+      margin: 29px 0 10px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+
+      @include mb {
+        font-size: 1.8rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.8rem;
+
+      @include mb {
+        font-size: 1.6rem;
+      }
+    }
+
+    h4 {
+      font-size: 1.6rem;
+
+      @include mb {
+        font-size: 1.4rem;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.8;
+      margin: 8px 0 4px;
+
+      @include mb {
+        font-size: 1.4rem;
+      }
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+
+    a {
+      color: $lightgreen;
+      text-decoration: underline;
+    }
+  }
+}

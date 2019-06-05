@@ -3,8 +3,12 @@
   display: flex;
   justify-content: center;
   margin: 0 auto 20px;
-  padding: 32px 16px 0;
+  padding: 20px 16px 0;
   width: 100%;
+
+  @include mb {
+    padding: 20px 12px;
+  }
 
   &__Main {
     margin-right: 40px;
@@ -12,6 +16,7 @@
 
     @include lb {
       margin-right: 0;
+      max-width: 740px;
       width: 100%;
     }
   }
