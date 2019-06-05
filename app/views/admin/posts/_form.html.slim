@@ -1,14 +1,14 @@
-= form_with model: [:admin, post], local: true do |f|
-  div
-    = f.label :title
-    = f.text_field :title
+= form_with model: [:admin, post], local: true, class: "AdminForm" do |f|
+  .AdminForm__Item
+    = f.label :title, class: "AdminForm__Label"
+    = f.text_field :title, class: "AdminForm__TextBox"
 
-  div
-    = f.label :description
-    = f.text_field :description
+  .AdminForm__Item
+    = f.label :description, class: "AdminForm__Label"
+    = f.text_area :description, class: "AdminForm__TextArea -small"
 
-  div
-    = f.label :content
-    = f.text_area :content
+  .AdminForm__Item
+    = f.label :content, class: "AdminForm__Label"
+    = f.text_area :content, class: "AdminForm__TextArea"
 
-  = f.submit "送信"
+  = f.submit "送信", class: "AdminForm__Button"

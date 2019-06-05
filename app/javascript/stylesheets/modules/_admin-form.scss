@@ -1,0 +1,39 @@
+.AdminForm {
+
+  &__Item {
+    margin-bottom: 20px;
+  }
+
+  &__Label {
+    display: block;
+  }
+
+  &__TextArea,
+  &__TextBox {
+    border: 1px solid $bggray;
+    border-radius: 6px;
+    color: $char;
+    font-size: 1.4rem;
+    padding: 16px;
+    width: 100%;
+  }
+
+  &__TextArea {
+    height: 800px;
+  }
+
+  &__TextArea.-small {
+    box-sizing: border-box;
+    height: 100px;
+  }
+
+  &__Button {
+    background: $green;
+    border-radius: 30px;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    min-width: 120px;
+    padding: 8px 30px;
+  }
+}
