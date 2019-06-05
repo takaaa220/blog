@@ -4,7 +4,7 @@ lock "~> 3.11.0"
 set :application, "blog"
 set :repo_url, "git@example.com:takaaa220/blog.git"
 
-set :deploy_to, '/var/www/taka_blog'
+set :deploy_to, '/var/www/blog'
 
 set :linked_files, fetch(:linkded_files, []).push(
   'config/master.key'
