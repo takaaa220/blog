@@ -21,7 +21,14 @@ gem 'meta-tags'
 gem 'gretel'
 gem 'redcarpet'
 gem 'coderay'
-# gem 'capistrano-rails', group: :development
+
+group :development do
+  gem "capistrano", "~> 3.11", require: false
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-rbenv-vars'
+end
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
