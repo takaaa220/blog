@@ -1,7 +1,8 @@
-li.AdminPosts__Item
-  div
+tr.AdminPosts__Item
+  td
     = post.title
-  div
-    = post.content.truncate(80)
-  div
+  td
+    = post.description.truncate(40)
+  td
     = post.toggle_button
+    = link_to "編集", edit_admin_post_path(post), class: "Button"

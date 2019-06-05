@@ -1,10 +1,12 @@
-ul.AdminPosts
-  li.AdminPosts__Item
-    div
-      | タイトル
-    div
-      | 本文
-    div
-      | ステータス
+.AdminPosts
+  table
+    thead
+      tr.AdminPosts__Item
+        th
+          | タイトル
+        th
+          | 概要
+        th
+          | ステータス
 
-  = render @posts
+    = render @posts
