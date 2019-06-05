@@ -22,7 +22,7 @@ RSpec.describe SessionsController, type: :controller do
   describe "#create" do
     it "can login" do
       post :create, params: { email: @user.email, password: @user.password }
-      expect(response).to redirect_to root_path
+      expect(response).to redirect_to admin_posts_path
     end
 
     it "cannot login" do

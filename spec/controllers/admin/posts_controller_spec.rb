@@ -63,7 +63,7 @@ RSpec.describe Admin::PostsController, type: :controller do
 
       it "redirect" do
         post :create, params: { post: correct_params }
-        expect(response).to redirect_to admin_posts_path
+        expect(response).to redirect_to admin_post_path(Post.last)
       end
     end
 
@@ -96,7 +96,7 @@ RSpec.describe Admin::PostsController, type: :controller do
 
       it "redirect" do
         post :update, params: { id: @post.id, post: correct_params }
-        expect(response).to redirect_to admin_posts_path
+        expect(response).to redirect_to admin_post_path(@post)
       end
     end
 
