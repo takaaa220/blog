@@ -7,7 +7,7 @@
   width: 100%;
 
   &__Main {
-    margin-right: 16px;
+    margin-right: 40px;
     width: 740px;
 
     @include lb {
@@ -17,7 +17,7 @@
   }
 
   &__Side {
-    width: 300px;
+    width: 250px;
 
     @include lb {
       display: none;
