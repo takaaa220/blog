@@ -9,6 +9,8 @@
 @import "modules/footer";
 @import "modules/header";
 @import "modules/nav";
+@import "modules/posts";
+@import "modules/post";
 @import "modules/side-menu";
 
 html {
@@ -21,4 +23,13 @@ body {
   font-family: "Roboto", "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
+}
+
+@for $i from 0 through 10 {
+  .mb#{$i * 5} {
+    margin-right: #{$i * 4}px;
+  }
+  .mr#{$i * 5} {
+    margin-right: #{$i * 4}px;
+  }
 }

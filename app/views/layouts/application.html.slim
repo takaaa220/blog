@@ -6,7 +6,6 @@ html
     = render "layouts/meta"
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
-    = javascript_pack_tag "application"
     link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet"
     link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"
 
@@ -15,3 +14,4 @@ html
     = render "layouts/header"
     = yield
     = render "layouts/footer"
+    = javascript_pack_tag "application"

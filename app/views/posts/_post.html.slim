@@ -1,7 +1,10 @@
-li
-  span
-    = post.published_time
-  h3
-    = post.title
-  p
-    = post.description
+li.Posts__Item
+  = link_to post, class: "Posts__Link" do
+    .Posts__Image
+    .Posts__Inner
+      span.Posts__Date
+        = post.published_time
+      h2.Posts__Title
+        = post.title
+      p.Posts__Description
+        = post.description

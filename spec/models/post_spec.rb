@@ -41,4 +41,20 @@ RSpec.describe Post, type: :model do
       end
     end
   end
+
+  describe "callback" do
+    it "changes published_at when published" do
+      @post.save
+      @post.toggle!(:published)
+
+      expect(@post.reload.published_at).not_to be nil
+    end
+
+    it "not change published_at when not published" do
+      @post = create(:post, { published: true })
+      expect{
+        @post.toggle!(:published)
+      }.not_to change{ @post.reload.published_at }
+    end
+  end
 end
