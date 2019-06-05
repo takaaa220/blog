@@ -3,14 +3,13 @@ header.Header
     | takaaa220's Engineer Blog
   p.Header__Description
     | 技術系の記事を投稿していきます．
-  / nav
-  /   ul.Nav
-  /     li.Nav__Item
-  /       = link_to "Ruby", "#"
-  /     li.Nav__Item
-  /       = link_to "React", "#"
-  /     li.Nav__Item
-  /       = link_to "プログラミング", "#"
-  /     li.Nav__Item
-  /       = link_to "趣味", "#"
+  - if admin_login?
+    nav
+      ul.Nav
+        li.Nav__Item
+          = link_to "一覧", admin_posts_path
+        li.Nav__Item
+          = link_to "新規作成", new_admin_post_path
+        li.Nav__Item
+          = button_to "ログアウト", logout_path, method: :delete
   / TODO: 検索窓設置
