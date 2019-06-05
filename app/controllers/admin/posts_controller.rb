@@ -4,7 +4,7 @@ class Admin::PostsController < Admin::BaseController
   end
 
   def show
-    @post = current_user.posts.find(params[:id])
+    @post = current_user.posts.find(params[:id]).decorate
   end
 
   def new

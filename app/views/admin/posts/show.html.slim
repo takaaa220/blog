@@ -1,0 +1,11 @@
+.Container
+  .Container__Main
+    .Post
+      p.Post__Date
+        = @post.published_time
+
+      h1.Post__Title
+        = @post.title
+
+      div.Post__Markdown
+        = markdown(@post.content).html_safe
