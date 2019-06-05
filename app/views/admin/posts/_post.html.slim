@@ -4,5 +4,7 @@ tr.AdminPosts__Item
   td
     = post.description.truncate(40)
   td
+    = link_to "編集", edit_admin_post_path(post)
+    br
+    = link_to "見た目チェック", admin_post_path(post)
     = post.toggle_button
-    = link_to "編集", edit_admin_post_path(post), class: "Button"

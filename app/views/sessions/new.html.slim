@@ -1,10 +1,13 @@
 - breadcrumb :login
 
-= form_with url: login_path, local: true do |f|
-  = f.label :email
-  = f.email_field :email, autofocus: true
+= form_with url: login_path, local: true, class: "AdminForm -small" do |f|
+  .AdminForm__Item
+    = f.label :email, class: "AdminForm__Label"
+    = f.email_field :email, autofocus: true, class: "AdminForm__TextBox"
 
-  = f.label :password
-  = f.password_field :password, autocomplete: false
+  .AdminForm__Item
+    = f.label :password, class: "AdminForm__Label"
+    = f.password_field :password, autocomplete: false, class: "AdminForm__TextBox"
 
-  = f.submit "ログイン"
+  div
+    = f.submit "ログイン", class: "Button ma"

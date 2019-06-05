@@ -14,7 +14,7 @@ class Admin::PostsController < Admin::BaseController
   def create
     @post = current_user.posts.build(post_params)
     if @post.save
-      redirect_to admin_posts_path
+      redirect_to admin_post_path(@post)
     else
       render :new
     end
@@ -27,7 +27,7 @@ class Admin::PostsController < Admin::BaseController
   def update
     @post = current_user.posts.find(params[:id])
     if @post.update(post_params)
-      redirect_to admin_posts_path
+      redirect_to admin_post_path(@post)
     else
       render :edit
     end

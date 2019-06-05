@@ -27,4 +27,6 @@ class ApplicationController < ActionController::Base
   def render_500
     render "errors/500"
   end
+
+  helper_method :admin_login?
 end

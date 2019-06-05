@@ -11,6 +11,7 @@ html
 
   body
     == breadcrumbs separator: " &rsaquo; "
+    = button_to "ログアウト", logout_path, method: :delete if admin_login?
     = render "layouts/header"
     = yield
     = render "layouts/footer"

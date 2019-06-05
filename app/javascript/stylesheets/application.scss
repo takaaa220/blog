@@ -29,6 +29,10 @@ body {
   line-height: 1.5;
 }
 
+.ma {
+  margin: 0 auto;
+}
+
 @for $i from 0 through 10 {
   .mb#{$i * 5} {
     margin-right: #{$i * 4}px;
@@ -36,4 +40,14 @@ body {
   .mr#{$i * 5} {
     margin-right: #{$i * 4}px;
   }
+}
+
+.Button {
+  background: $green;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  min-width: 120px;
+  padding: 8px 30px;
 }

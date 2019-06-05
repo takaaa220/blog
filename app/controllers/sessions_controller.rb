@@ -8,14 +8,14 @@ class SessionsController < ApplicationController
     @login = LoginService.new(login_params)
     if user = @login.call
       session[:user_id] = user.id
-      redirect_to root_path and return
+      redirect_to admin_posts_path and return
     end
 
     render :new
   end
 
   def destroy
-    session[:user_id].delete
+    session.delete(:user_id)
     redirect_to root_path
   end
 
