@@ -32,19 +32,19 @@ RSpec.describe PostsController, type: :controller do
 
   describe "get #show" do
     it "is 200 with published post" do
-      get :show, params: { id: @published_post.id }
+      get :show, params: { pid: @published_post.pid }
       expect(response).to have_http_status 200
     end
 
     it "is 404 with unpublished post" do
       expect {
-        get :show, params: { id: @unpublished_post.id }
+        get :show, params: { pid: @unpublished_post.pid }
       }.to raise_error(ActiveRecord::RecordNotFound)
     end
 
     it "is 404 with not post" do
       expect {
-        get :show, params: { id: Post.last.id + 1 }
+        get :show, params: { pid: "aaaaa" }
       }.to raise_error(ActiveRecord::RecordNotFound)
     end
   end

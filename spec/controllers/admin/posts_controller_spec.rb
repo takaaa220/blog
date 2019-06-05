@@ -16,7 +16,7 @@ RSpec.describe Admin::PostsController, type: :controller do
   end
 
   it "redirects in show" do
-    get :show, params: { id: @post.id }
+    get :show, params: { pid: @post.pid }
     expect(response).to redirect_to root_path
     expect(response).to have_http_status 302
   end
@@ -38,13 +38,13 @@ RSpec.describe Admin::PostsController, type: :controller do
     end
 
     it do
-      get :show, params: { id: @post.id }
+      get :show, params: { pid: @post.pid }
       expect(response).to have_http_status 200
     end
 
     it "not found" do
       expect {
-        get :show, params: { id: 10000 }
+        get :show, params: { pid: 10000 }
       }.to raise_error(ActiveRecord::RecordNotFound)
     end
   end
@@ -63,7 +63,7 @@ RSpec.describe Admin::PostsController, type: :controller do
 
       it "redirect" do
         post :create, params: { post: correct_params }
-        expect(response).to redirect_to admin_post_path(Post.last)
+        expect(response).to redirect_to admin_post_path(Post.last.pid)
       end
     end
 
@@ -90,25 +90,25 @@ RSpec.describe Admin::PostsController, type: :controller do
       it "change title" do
         changed_title = "hello world"
         expect{
-          post :update, params: { id: @post.id, post: attributes_for(:post, { user: nil, title: changed_title })}
+          post :update, params: { pid: @post.pid, post: attributes_for(:post, { user: nil, title: changed_title })}
         }.to change { Post.find(@post.id).title }.from(@post.title).to(changed_title)
       end
 
       it "redirect" do
-        post :update, params: { id: @post.id, post: correct_params }
-        expect(response).to redirect_to admin_post_path(@post)
+        post :update, params: { pid: @post.pid, post: correct_params }
+        expect(response).to redirect_to admin_post_path(@post.pid)
       end
     end
 
     context "failure" do
       it "not increase db" do
         expect {
-          post :update, params: { id: @post.id, post: { title: "", content: "hello world"} }
+          post :update, params: { pid: @post.pid, post: { title: "", content: "hello world"} }
         }.not_to change{ Post.find(@post.id).title }
       end
 
       it "render edit" do
-        post :update, params: { id: @post.id, post: { title: "", content: "hello world"} }
+        post :update, params: { pid: @post.pid, post: { title: "", content: "hello world"} }
         expect(response).to render_template "admin/posts/edit"
       end
     end
@@ -121,7 +121,7 @@ RSpec.describe Admin::PostsController, type: :controller do
 
     it do
       expect{
-        delete :destroy, params: { id: @post.id }
+        delete :destroy, params: { pid: @post.pid }
       }.to change { Post.count }.by(-1)
     end
   end
@@ -133,25 +133,25 @@ RSpec.describe Admin::PostsController, type: :controller do
 
     it "raises without post" do
       expect {
-        post :toggle, params: { id: 10000 }
+        post :toggle, params: { pid: 10000 }
       }.to raise_error(ActiveRecord::RecordNotFound)
     end
 
     it "can publish post" do
       expect{
-        post :toggle, params: { id: @post.id }
+        post :toggle, params: { pid: @post.pid }
       }.to change { Post.last.published }.from(false).to(true)
     end
 
     it "can unpublished post" do
       @post = create(:post, { published: true, user: @user } )
       expect {
-        post :toggle, params: { id: @post.id }
+        post :toggle, params: { pid: @post.pid }
       }.to change { Post.last.published }.from(true).to(false)
     end
 
     it "redirect_to admin_posts_path" do
-      post :toggle, params: { id: @post.id }
+      post :toggle, params: { pid: @post.pid }
       expect(response).to have_http_status 302
       expect(response).to redirect_to admin_posts_path
     end

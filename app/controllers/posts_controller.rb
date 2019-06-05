@@ -4,6 +4,7 @@ class PostsController < UserPageController
   end
 
   def show
-    @post = Post.published.find(params[:id]).decorate
+    @post = Post.published.find_by(pid: params[:pid])&.decorate
+    not_found if @post.nil?
   end
 end

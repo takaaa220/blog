@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  def not_found
+    raise ActiveRecord::RecordNotFound
+  end
+
   def admin_login?
     !!current_user&.admin?
   end

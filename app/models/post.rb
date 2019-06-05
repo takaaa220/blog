@@ -8,6 +8,7 @@ class Post < ApplicationRecord
   scope :desc, -> { order(id: :desc) }
   scope :published, -> { where(published: true) }
 
+  before_create :create_pid
   before_update :changed_published_status
 
   def self.posts_per_month
@@ -20,5 +21,9 @@ class Post < ApplicationRecord
     if published_changed? && published_at.nil? && published?
       self.published_at = Time.zone.now
     end
+  end
+
+  def create_pid
+    self.pid = SecureRandom.uuid
   end
 end

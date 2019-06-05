@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
 
-  resources :posts
+  resources :posts, param: :pid
 
   namespace :admin do
-    resources :posts do
+    resources :posts, param: :pid do
       post "toggle", on: :member
     end
   end

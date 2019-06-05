@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_02_062956) do
+ActiveRecord::Schema.define(version: 2019_06_05_034657) do
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2019_06_02_062956) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.string "description", null: false
+    t.string "pid"
+    t.index ["pid"], name: "index_posts_on_pid", unique: true
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
