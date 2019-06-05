@@ -21,7 +21,7 @@ production:
   encoding: utf8
   pool: 5
   database: blog_production
-  username: <%= ENV['BLOG_USERNAME'] %>
-  password: <%= ENV['BLOG_PASSWORD'] %>
+  username: <%= Rails.application.credentials.conoha["blog_username"] %>
+  password: <%= Rails.application.credentials.conoha["blog_password"] %>
   socket: /var/lib/mysql/mysql.sock
   host: <%= ENV['DB_HOST'] %>
