@@ -65,5 +65,42 @@
       color: $lightgreen;
       text-decoration: underline;
     }
+
+    pre {
+      background-color: $bggray;
+      border-radius: 4px;
+      margin: 12px 0px;
+      padding: 12px 16px;
+    }
+
+    code {
+      background-color: $bggray;
+      border-radius: 4px;
+      padding: 4px 8px;
+    }
+
+    ul {
+      margin: 8px 20px 12px;
+
+      li {
+        &:before {
+          content: "-";
+          padding-right: 18px;
+        }
+      }
+    }
+
+    ol {
+      counter-reset: item;
+      margin: 8px 20px 12px;
+
+      li {
+        &:before {
+          counter-increment: item;
+          content: counter(item) '.';
+          padding-right: 10px;
+        }
+      }
+    }
   }
 }
