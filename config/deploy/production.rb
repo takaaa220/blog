@@ -4,7 +4,11 @@
 server '118.27.37.130', user: 'taka', roles: %w{app db web}, port: 10022
 
 #デプロイするサーバーにsshログインする鍵の情報。サーバー編で作成した鍵のパス
-set :ssh_options, keys: '~/.ssh/conoha/id_rsa'
+set :ssh_options, {
+  keys: '~/.ssh/conoha/id_rsa',
+  forward_agent: true,
+  auth_methods: %w(publickey)
+}
 
 set :stage, :production
 set :rails_env, 'production'

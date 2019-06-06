@@ -2,8 +2,7 @@
 lock "~> 3.11.0"
 
 set :application, "blog"
-set :repo_url, "git@example.com:takaaa220/blog.git"
-
+set :repo_url, "https://github.com/takaaa220/blog.git"
 set :deploy_to, '/var/www/blog'
 
 set :linked_files, fetch(:linkded_files, []).push(
@@ -40,7 +39,7 @@ set :puma_init_active_record, true
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
-  task :make_dires do
+  task :make_dirs do
     on roles(:app) do
       execute "mkdir #{shared_path}/tmp/sockets -p"
       execute "mkdir #{shared_path}/tmp/pids -p"
