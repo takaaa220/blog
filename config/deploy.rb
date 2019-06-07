@@ -5,10 +5,10 @@ set :application, "blog"
 set :repo_url, "https://github.com/takaaa220/blog.git"
 set :deploy_to, '/var/www/blog'
 
-set :linked_files, fetch(:linkded_files, []).push(
+set :linked_files, fetch(:linked_files, []).push(
   'config/master.key'
 )
-set :linked_dirs, fetch(:linked_dires, []).push(
+set :linked_dirs, fetch(:linked_dirs, []).push(
   'log',
   'tmp/pids',
   'tmp/cache',
