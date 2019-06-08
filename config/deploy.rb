@@ -2,7 +2,7 @@
 lock "~> 3.11.0"
 
 set :application, "blog"
-set :repo_url, "https://github.com/takaaa220/blog.git"
+set :repo_url, "git@github.com:takaaa220/blog.git"
 set :deploy_to, '/var/www/blog'
 
 set :linked_files, fetch(:linked_files, []).push(
