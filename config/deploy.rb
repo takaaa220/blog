@@ -18,7 +18,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
 )
 
 set :yarn_flags, "--prefer-offline --production"
-set :yarn_roles, :app
+set :yarn_roles, :blog
 
 set :keep_releases, 3
 
