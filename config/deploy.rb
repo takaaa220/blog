@@ -17,6 +17,9 @@ set :linked_dirs, fetch(:linked_dirs, []).push(
   'public/system'
 )
 
+set :yarn_flags, "--prefer-offline --production"
+set :yarn_roles, :app
+
 set :keep_releases, 3
 
 set :rbenv_ruby, '2.6.3'

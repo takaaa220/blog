@@ -29,6 +29,7 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-rbenv-vars'
   gem 'capistrano3-puma'
+  gem 'capistrano-yarn'
 end
 
 # Reduces boot times through caching; required in config/boot.rb
