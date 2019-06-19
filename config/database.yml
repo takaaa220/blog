@@ -5,7 +5,10 @@ default: &default
   host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
   username: <%= ENV.fetch("DB_USERNAME") { 'root' } %>
   password: <%= ENV.fetch("DB_PASSWORD") {''} %>
-  socket: /tmp/mysql.sock
+  socket: <%= ["/run/mysqld/mysqld5.6.sock",
+               "/tmp/mysqld.sock",
+               "/var/run/mysqld/mysqld.sock",
+               "/var/lib/mysql/mysql.sock"].detect {|s| File.exist?(s) } %>
 
 development:
   <<: *default
