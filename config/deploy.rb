@@ -23,7 +23,7 @@ set :yarn_roles, :blog
 set :keep_releases, 3
 
 set :rbenv_ruby, '2.6.3'
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+# set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 set :log_level, :debug
 
