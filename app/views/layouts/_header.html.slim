@@ -14,4 +14,11 @@ header.Header
           = link_to "新規作成", new_admin_post_path
         li.Nav__Item
           = button_to "ログアウト", logout_path, method: :delete
+  - else
+    nav
+      ul.Nav
+        li.Nav__Item
+          = link_to "Githubへ", "https://github.com/takaaa220", target: "_blank", rel: "noopener"
+        li.Nav__Item
+          = link_to "Twitterへ", "https://twitter.com/takaaa220", target: "_blank", rel: "noopener"
   / TODO: 検索窓設置
