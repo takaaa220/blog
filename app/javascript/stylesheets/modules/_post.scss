@@ -23,12 +23,12 @@
     color: $char;
 
     h2, h3, h4 {
-      margin: 29px 0 15px;
     }
 
     h2 {
-      border-bottom: solid 1px $green;
+      border-bottom: solid 1px $lightgray;
       font-size: 2.2rem;
+      margin: 40px 0 20px;
 
       @include mb {
         font-size: 1.8rem;
@@ -36,6 +36,7 @@
     }
 
     h3 {
+      margin: 30px 0 15px;
       font-size: 1.8rem;
 
       @include mb {
@@ -44,6 +45,7 @@
     }
 
     h4 {
+      margin: 20px 0 10px;
       font-size: 1.6rem;
 
       @include mb {
