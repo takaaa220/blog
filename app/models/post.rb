@@ -3,6 +3,8 @@ class Post < ApplicationRecord
   validates :content, presence: true
   validates :description, presence: true, length: { maximum: 200 }
 
+  has_many :post_tags, dependent: :destroy
+  has_many :tags, through: :post_tags
   belongs_to :user
 
   scope :desc, -> { order(id: :desc) }
