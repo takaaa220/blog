@@ -6,6 +6,7 @@ module ApplicationHelper
         description: "渋谷のベンチャー企業でバックエンドもフロントエンドも粛々と書いているエンジニアの個人ブログ．主にサーバはRuby，フロントはReactを書いています．",
         keywords: "rails,ruby,react,バックエンド,フロントエンド",
         icon: [
+            { href: image_tag("/favicon_32.ico") },
             { href: image_tag("/favicon.ico") },
             { href: image_tag("/takaaa220.png"), rel: 'apple-touch-icon', sizes: '180x180',type: 'image/png' }
         ],
