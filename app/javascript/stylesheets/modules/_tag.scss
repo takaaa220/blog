@@ -1,0 +1,14 @@
+.Tag {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -4px -4px 0;
+
+  &__Item {
+    border: solid 2px $green;
+    border-radius: 6px;
+    color: $green;
+    font-weight: bold;
+    margin: 0 4px 4px 0;
+    padding: 4px 16px;
+  }
+}

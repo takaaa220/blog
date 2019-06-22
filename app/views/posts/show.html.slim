@@ -10,5 +10,10 @@
     h1.Post__Title
       = @post.title
 
+    .mb4.Tag
+      - @post.tags.pluck(:name).each do |tag|
+        .Tag__Item
+          = tag
+
     div.Post__Markdown
       = markdown(@post.content).html_safe
