@@ -27,8 +27,8 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 set :log_level, :debug
 
-set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
+# set :whenever_command, "bundle exec whenever"
+# require "whenever/capistrano"
 
 # puma settings
 set :puma_threads,    [4, 16]
