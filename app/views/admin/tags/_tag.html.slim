@@ -1,0 +1,5 @@
+tr.AdminPosts
+  td
+    = tag.name
+  td
+    = button_to "削除", admin_tag_path(tag), method: :delete, data: { confirm: "削除しますか？" }

@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     resources :posts, param: :pid do
       post "toggle", on: :member
     end
+    resources :tags, only: %w(index create destroy)
   end
 end

@@ -9,8 +9,12 @@ ja:
         title: タイトル
         content: 本文
         description: 概要
+        tag_ids: タグ
       user:
         id: ID
         email: メールアドレス
         password: パスワード
         status: ユーザステータス
+      tag:
+        id: ID
+        name: タグ名

@@ -1,0 +1,15 @@
+.mb8
+  = form_with(model: @tag, url: admin_tags_path, method: :post, class: "AdminForm", local: true) do |f|
+    = f.label :name, class: "AdminForm__Label"
+    .AdminForm__Item.-flex
+      = f.text_field :name, class: "AdminForm__TextBox mr8"
+      = f.submit "作成", class: "Button"
+.AdminPosts
+  table
+    thead
+      tr.AdminPosts__Item
+        th
+          | タグ名
+        th
+          | ボタン
+    = render @tags

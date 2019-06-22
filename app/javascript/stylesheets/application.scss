@@ -36,10 +36,10 @@ body {
 }
 
 @for $i from 0 through 10 {
-  .mb#{$i * 5} {
-    margin-right: #{$i * 4}px;
+  .mb#{$i} {
+    margin-bottom: #{$i * 4}px;
   }
-  .mr#{$i * 5} {
+  .mr#{$i} {
     margin-right: #{$i * 4}px;
   }
 }
