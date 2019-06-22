@@ -7,9 +7,16 @@ class Post < ApplicationRecord
 
   scope :desc, -> { order(id: :desc) }
   scope :published, -> { where(published: true) }
+  scope :count_per_month, -> { group("DATE_FORMAT(created_at, '%Y / %m')").count }
 
   before_create :create_pid
   before_update :changed_published_status
+
+  def self.get_by_published_month(year, month)
+    month_d = Date.new(year, month)
+
+    where(published_at: month_d..month_d.end_of_month)
+  end
 
   def self.posts_per_month
     Post.group("MONTH(date)")

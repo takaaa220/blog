@@ -2,7 +2,7 @@
 lock "~> 3.11.0"
 
 set :application, "blog"
-set :repo_url, "git@github.com:takaaa220/blog.git"
+set :repo_url, "https://github.com/takaaa220/blog.git"
 set :deploy_to, '/var/www/blog'
 
 set :linked_files, fetch(:linked_files, []).push(
@@ -29,7 +29,7 @@ set :log_level, :debug
 # puma settings
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
-set :pty,             true
+set :pty,             false
 set :use_sudo,        false
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"

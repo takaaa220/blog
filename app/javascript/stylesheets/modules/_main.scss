@@ -1,0 +1,13 @@
+.Main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 20px 16px 0;
+  width: 100%;
+
+  @include mb {
+    padding: 20px 12px;
+  }
+}

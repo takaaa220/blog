@@ -2,6 +2,9 @@ section.Archive
   h4.SideMenu__Title
     | 過去の記事
   ul.Archive__Items
-    - @archives.each do |archive|
+    - @archives.each do |date, count|
       li.Archive__Item
-        = archive
+        = link_to posts_path(date: date) do
+          = date
+          br
+          = count

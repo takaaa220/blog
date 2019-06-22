@@ -7,7 +7,8 @@ server '118.27.37.130', user: 'taka', roles: %w{app db web}, port: 10022
 set :ssh_options, {
   keys: '~/.ssh/conoha/id_rsa',
   forward_agent: true,
-  auth_methods: %w(publickey)
+  auth_methods: %w(publickey),
+  config: false
 }
 
 set :stage, :production

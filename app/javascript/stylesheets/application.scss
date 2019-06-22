@@ -8,6 +8,7 @@
 @import "modules/container";
 @import "modules/footer";
 @import "modules/header";
+@import "modules/main";
 @import "modules/nav";
 @import "modules/posts";
 @import "modules/post";
@@ -26,7 +27,8 @@ body {
   color: $char;
   font-family: "Roboto", "Noto Sans JP", sans-serif;
   font-size: 1.6rem;
-  line-height: 1.5;
+  line-height: 1.7;
+  letter-spacing: .2px;
 }
 
 .ma {

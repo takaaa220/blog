@@ -1,72 +1,14 @@
 .Posts {
-
-  //& &__Image {
-  //  position: absolute;
-  //  width: 100%;
-  //}
-
-  & &__Image {
-    position: relative;
-
-    &:before {
-      background: $lightgreen url("../images/imac.svg") no-repeat;
-      background-size: 60% 60%;
-      background-position: 50% 60%;
-      content: '';
-      display: block;
-      height: 0;
-      padding-bottom: 50%;
-      width: 100%;
-    }
-  }
-
-  & &__Inner {
-    padding: 12px;
-  }
-
-  & &__Date {
-    color: $gray;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-  }
-
-  & &__Title {
-    color: $green;
-    font-size: 2.4rem;
-    margin-bottom: 4px;
-
-    @include mb {
-      font-size: 1.8rem;
-    }
-  }
-
-  & &__Link {
-    display: block;
-  }
-
-  & &__Description {
-    color: $char;
-    font-size: 1.4rem;
-
-    @include mb {
-      font-size: 1.2rem;
-    }
+  &:not(:root) {
+    width: 100%;
   }
 
   & &__Item {
-    border: 1px solid $bggray;
-    border-radius: 4px;
-    box-shadow: 0 4px 4px rgba($gray, .2);
     margin-bottom: 40px;
-    transition: box-shadow .2s;
     width: 100%;
 
     @include mb {
       margin-bottom: 30px;
-    }
-
-    &:hover {
-      box-shadow: none;
     }
   }
 }

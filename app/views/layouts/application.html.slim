@@ -9,6 +9,8 @@ html
     = javascript_include_tag 'application'
     link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet"
     link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"
+    script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js'
+    script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js'
 
   body
     == breadcrumbs separator: " &rsaquo; "
@@ -17,3 +19,4 @@ html
     = yield
     = render "layouts/footer"
     = javascript_pack_tag "application"
+    = yield(:javascript)

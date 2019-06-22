@@ -4,7 +4,7 @@ class UserPageController < ApplicationController
 
   def set_archives
     # TODO: 月ごとに集計する
-    @archives = []
+    @archives = Post.count_per_month
   end
 
   def set_populars

@@ -1,5 +1,16 @@
 .AdminForm {
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
+
+  &__Content {
+    width: 48%;
+
+    &:last-child {
+      background: white;
+      padding: 12px;
+    }
+  }
 
   &__Item {
     margin-bottom: 20px;
