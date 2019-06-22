@@ -21,6 +21,8 @@ gem 'meta-tags'
 gem 'gretel'
 gem 'redcarpet'
 gem 'coderay'
+gem 'whenever', require: false
+gem 'sitemap_generator'
 
 group :development do
   gem "capistrano", "~> 3.11", require: false

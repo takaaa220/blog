@@ -1,8 +1,8 @@
 module ApplicationHelper
   def default_meta_tags
     {
-        site: "Engineer.new(name: 'takaaa220')",
-        title: "Engineer.new(name: 'takaaa220')",
+        site: "takaaa220 Tech Blog",
+        title: "takaaa220 Tech Blog",
         description: "渋谷のベンチャー企業でバックエンドもフロントエンドも粛々と書いているエンジニアの個人ブログ．主にサーバはRuby，フロントはReactを書いています．",
         keywords: "rails,ruby,react,バックエンド,フロントエンド",
         icon: [
