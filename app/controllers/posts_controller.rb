@@ -1,6 +1,6 @@
 class PostsController < UserPageController
   def index
-    @posts = Post.published.desc.map(&:decorate)
+    @posts = PostDecorator.decorate_collection(Post.published.desc.page(params[:page]).per(10))
   end
 
   def show

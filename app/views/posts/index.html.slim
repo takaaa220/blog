@@ -5,3 +5,6 @@
 = render "layouts/user_page" do
   ul.Posts
     = render @posts
+
+  .mb8
+    = paginate @posts

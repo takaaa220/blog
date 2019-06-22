@@ -6,5 +6,9 @@ li.Posts__Item
     h2.Post__Title
       = link_to post.title, post_path(post.pid), class: "Post__Link"
 
+    ul.mb4.Tag
+      - post.tags.pluck(:name).each do |tag|
+        li.Tag__Item
+          = tag
     div.Post__Markdown
       = markdown(post.content).html_safe

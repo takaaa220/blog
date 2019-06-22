@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 450px;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+
+  .first, .prev, .page, .next, .last {
+    display: block;
+    text-align: center;
+
+    a {
+      color: $green;
+      text-decoration: underline;
+    }
+  }
+
+  .current {
+    border: 2px solid $gray;
+    color: $gray;
+    width: 30px;
+  }
+}

@@ -10,9 +10,9 @@
     h1.Post__Title
       = @post.title
 
-    .mb4.Tag
+    ul.mb4.Tag
       - @post.tags.pluck(:name).each do |tag|
-        .Tag__Item
+        li.Tag__Item
           = tag
 
     div.Post__Markdown
