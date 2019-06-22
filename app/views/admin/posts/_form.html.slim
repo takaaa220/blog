@@ -1,21 +1,22 @@
 = form_with model: post, url: url, local: true, method: method, class: "AdminForm", id: "editor" do |f|
-  .AdminForm__Content
-    .AdminForm__Item
-      = f.label :title, class: "AdminForm__Label"
-      = f.text_field :title, class: "AdminForm__TextBox"
+  .AdminForm__Item
+    = f.label :title, class: "AdminForm__Label"
+    = f.text_field :title, class: "AdminForm__TextBox"
 
-    .AdminForm__Item
-      = f.label :description, class: "AdminForm__Label"
-      = f.text_area :description, class: "AdminForm__TextArea -small"
+  .AdminForm__Item
+    = f.label :description, class: "AdminForm__Label"
+    = f.text_area :description, class: "AdminForm__TextArea -small"
 
-    .AdminForm__Item
+  .AdminForm__Item.-flex
+    .AdminForm__Content
       = f.label :content, class: "AdminForm__Label"
       = f.text_area :content, class: "AdminForm__TextArea", "v-model": "input"
+    .AdminForm__Content
+      .Post__Markdown v-html='input | marked'
 
-    = f.submit "送信", class: "Button"
+  = f.submit "送信", class: "Button"
 
-  .AdminForm__Content
-    .Post__Markdown v-html='input | marked'
+
 
 
   - content_for(:javascript) do
