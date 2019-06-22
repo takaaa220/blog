@@ -7,6 +7,12 @@
     = f.label :description, class: "AdminForm__Label"
     = f.text_area :description, class: "AdminForm__TextArea -small"
 
+  .AdminForm__Item
+    = f.label :tag_ids, class: "AdminForm__Label"
+    = f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |check|
+      = check.check_box
+      = check.label
+
   .AdminForm__Item.-flex
     .AdminForm__Content
       = f.label :content, class: "AdminForm__Label"
