@@ -41,7 +41,6 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 
 set :whenever_command, "bundle exec whenever"
-require "whenever/capistrano"
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
