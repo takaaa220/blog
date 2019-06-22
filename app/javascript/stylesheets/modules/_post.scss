@@ -23,10 +23,11 @@
     color: $char;
 
     h2, h3, h4 {
-      margin: 29px 0 10px;
+      margin: 29px 0 15px;
     }
 
     h2 {
+      border-bottom: solid 1px $green;
       font-size: 2.2rem;
 
       @include mb {
@@ -54,7 +55,7 @@
       word-wrap: break-word;
       font-size: 1.6rem;
       line-height: 1.8;
-      margin: 8px 0 4px;
+      margin: 8px 0 12px;
 
       @include mb {
         font-size: 1.4rem;
