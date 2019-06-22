@@ -23,9 +23,11 @@ set :yarn_roles, :blog
 set :keep_releases, 3
 
 set :rbenv_ruby, '2.6.3'
-set :rbenv_map_bins
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 set :log_level, :debug
+
+set :whenever_command, "bundle exec whenever"
 
 # puma settings
 set :puma_threads,    [4, 16]
@@ -41,7 +43,6 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 
-set :whenever_command, "bundle exec whenever"
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'
