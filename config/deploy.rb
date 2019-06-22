@@ -27,7 +27,7 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 set :log_level, :debug
 
-set :whenever_command, "bundle exec whenever"
+set :whenever_command, "cd /var/www/blog/releases/20190622074657 && ( export RBENV_ROOT='$HOME/.rbenv' RBENV_VERSION='2.6.3' RAILS_ENV='production' ; $HOME/.rbenv/bin/rbenv exec bundle exec whenever )"
 
 # puma settings
 set :puma_threads,    [4, 16]
